@@ -40,18 +40,25 @@ hello.txt라는 파일을 실행(hello.txt 파일이 존재하지 않는다면 �
 > vim hello.txt
 
 를 입력한다.(하단 이미지 참고)
+&nbsp;
 ![hello.txt](https://drive.google.com/uc?id=1FS__wL_GKTUiNZiiWkqMQBtxg4WVE73Y)
-
+&nbsp;
 새로 생성하게 되면 하단에 "hello.txt"[새 파일]이라고 표시가 되며, **명령 모드(command mode)로 시작**이 되므로 바로 편집을 할 수는 없다.
+&nbsp;
 ![hellotxt_open](https://drive.google.com/uc?id=1Pgvy6dWnD_2GcB0l88anYDf17cufMKNv)
 위 이미지는 **'명령 모드(command mode)'**,
 편집을 하기 위해서는 **i 키를 통해 편집 모드(edit mode)로 전환**한다.
 아래 이미지(예시)는 **'편집 모드(edit mode)'**로 편집이 가능하다.
+&nbsp;
+
 ![hellotxt_editmode_prac](https://drive.google.com/uc?id=14kEAVmm5IaRzX2YS0PhFCcOajOcOsTEZ)
  '명령 모드(command mode)'에서, **: 를 입력하면 '명령라인 모드(command line)'**로 전환된다.
  (:표시가 아래에 생기면서 커서가 제일 아래로 이동한다)
  아래 이미지가 명령라인 모드.
+ &nbsp;
+
  ![hellotxt_commandline mode](https://drive.google.com/uc?id=1oryifxiSbd9qkJjyN2u_uFQF2ivM0u4e)
+
   * 어떤 모드라도 esc키로 '명령 모드(commmand mode)'로 전환 가능하다.
 
 ## 커서 이동(h,j,k,l) / 글자 추가 및 삭제(i,a,o,x)
@@ -75,19 +82,25 @@ hello.txt라는 파일을 실행(hello.txt 파일이 존재하지 않는다면 �
  * 먼저 파일을 저장하기 위해서는, 명령라인 모드에서 **:w**을 입력하면 된다. 이 때, 처음에 저장 파일 이름을 입력하지 않았을 경우 에러가 뜬다.
 
 * 파일에 이름을 지정해 저장하려면,  **:w (파일이름)**을 입력하면 된다. (하단 이미지 참고) 또한  명령라인모드에서** :cd를 입력하면 현재 경로를 확인**할 수 있다.
+&nbsp;
+
 ![이름 지정해서 저장하기](https://drive.google.com/uc?id=1obJs91SM2zAGpPtroG8lG_TyX7U-8pGg)
 ![저장 완료](https://drive.google.com/uc?id=1d8Z3gA63l4-7HrpnRQhJJiZyAAEkvoPv)
 > 파일이름을 지정한 후 저장(**:w hellovim.txt**)이 완료되면 위와 같이 저장되었음을 확인할 수 있다.
 
 
 * 지정된 경로에 있는 파일을 불러오기 위해서는, vim을 열고, 명령라인모드에서  **:o d:(경로)(파일명)**을 입력한다.
+&nbsp;
+
 ![](https://drive.google.com/uc?id=1vjJfsNfa5nQ5LqNwID6Kn4pRozJ5l5cF)
 
 ## 종료(:q), 강제종료(:q!), 저장 후 종료하기(:wq)
 * 명령라인 모드에서 종료, 강제종료, 저장 후 종료를 실행할 수 있다. 먼저 종료할 때는 **:q**를 입력한다.
+&nbsp;
 ![](https://drive.google.com/uc?id=119yfEWqnFCRPsDUIOMFE7UGFSdzR0tfR)
 > 저장하지 않고 끝내려 했을 때 오류가 발생하기도 하는데 이 때는 **:q!**을 입력해 종료할 수 있다. (뒤에 !을 붙이는 것은 강제로 수행한다는 의미 )
 * 저장 후 종료는, **:wq**으로 가능하다.
+&nbsp;
 ![](https://drive.google.com/uc?id=1Xv1Upx2FMMAX64iMc7TrtdwWPNmhwAtI)
 > 현재 사용하는 파일명이 없으면 오류가 발생하기도 한다. 이 때는 경로 지정과 함께 파일명을 지정하면서 저장 후 종료를 하면 저장이 가능하다. (ex-  :wq d:\home\hs\hello.txt)
 --------------------------
@@ -95,10 +108,14 @@ hello.txt라는 파일을 실행(hello.txt 파일이 존재하지 않는다면 �
 ## 한줄복사(yy), 붙여넣기(p), 반복작업
 * y는 yank의 약자로, vim에서는 copy라는 말 대신 사용한다. yank는 붙잡아 둔다는 뜻으로, yy를 하면 한줄을 붙잡아 두는 명령이다.
 * (**명령 모드에서** - 명령라인 모드가 아니다!)** y명령키를 2번 누르면, 해당 커서가 있는 한 줄이 복사**된다. 화면에서는 yy가 입력되지는 않는다.
+&nbsp;
 ![](https://drive.google.com/uc?id=1aWzNiLZgcnOfXsBswp4OBd2BZ4-EYpll)
 * 이 상태에서, p를 입력하면 복사된 한 줄이 붙여넣기된다. (p는 put의 약자이다)
+&nbsp;
 ![](https://drive.google.com/uc?id=1MCmc4xurRbjR0-LuTPRUCIW5Ekps3VCH)
-* 이 때, **한번에 여러번 붙여넣기를 하고 싶다면 앞에 숫자를 붙여 p를 입력**하면 된다. 예를 들어 7p를 입력한 경우, 아래와 같이 해당 상태에서, 7줄이 붙여넣기 된다.  ![](https://drive.google.com/uc?id=1xnnIH7pYn0QjzkRyKs39FPLGcHD51_a6)
+* 이 때, **한번에 여러번 붙여넣기를 하고 싶다면 앞에 숫자를 붙여 p를 입력**하면 된다. 예를 들어 7p를 입력한 경우, 아래와 같이 해당 상태에서, 7줄이 붙여넣기 된다.
+&nbsp;
+ ![](https://drive.google.com/uc?id=1xnnIH7pYn0QjzkRyKs39FPLGcHD51_a6)
 
 ## 취소(u), 다시실행(ctrl+r)
 * 취소(undo), 다시실행(redo)의 기능은 기타 다른 편집기의 ctrl+z, ctrl+shift+z와 같은 기능이다. 주로 vim에서는 undo 가 자주 사용된다. 명령어를 잘못 입력했을 경우, u를 눌러 undo할 수 있다.
@@ -108,12 +125,14 @@ hello.txt라는 파일을 실행(hello.txt 파일이 존재하지 않는다면 �
 * vim에서 명령라인모드(command-line mode)로 진입하려면, :를 입력하는 것 말고도 /, ?, ! 의 방법들이 있다. 이 중 / ?는 search command 라고 한다. (!는 추후에 배운다.)
 * **/ 명령어는 '정방향 찾기'** 로서 /기호는 향후 리눅스 및 정규표현식 등에서 search로 사용될 때 많이 쓰는 기호이다.
   * 입력하고자 하는 텍스트를 입력한 후, esc키를 눌러 명령모드로 빠져나온 후 **/(찾고자 하는 단어)**를 입력하고 엔터를 누른다.
+  &nbsp;
   ![](https://drive.google.com/uc?id=128m2aPMwsH40kKxGChgcnwitvAUHC4nC)
   ![](https://drive.google.com/uc?id=1DHUb1JdEIgyerB_conqV1jcRF4vMznWH)
 
 
 * **?는 역방향 찾기**의 기능이다.(자주 사용되지는 않는다.)
   * 마찬가지로, 명령 모드에서 **?(찾을 단어)**를 입력하고 엔터를 누른다.
+  &nbsp;
    ![](https://drive.google.com/uc?id=1iCcyjEasJm9R-dd-HIrf2I_9uZAYTcYN)
    ![](https://drive.google.com/uc?id=1SRLyAUKw-oPAbbXK8--ZhjOLO14pCmpg)
 
@@ -130,6 +149,7 @@ b를 누르면 이전 단어의 제일 앞글자로,
 e는 다음 단어의 끝으로 이동**한다.
   * 이 때 대문자 W, B, E는 ,  - 등의 기호를 한 단어로 취급하지 않고, 소문자는 기호 역시 한 단어로 취급한다.
 * 명령어 정리
+&nbsp;
 ![](https://mblogthumb-phinf.pstatic.net/20150506_19/nfwscho_1430849486574uECfF_PNG/%BE%D3%B0%B3_vim_%C4%BF%BC%AD%C0%CC%B5%BF_00_0.png?type=w420)
 
 ## 커서이동 반화면 아래, 반화면 위로, 문서처음, 문서마지막 이동, 특정 줄 이동
@@ -144,13 +164,12 @@ e는 다음 단어의 끝으로 이동**한다.
 
 
 * 문서 맨 처음으로 이동하는 명령어는 gg, 문서의 제일 끝으로 이동하는 명령어는 G이다. (순서대로 gg, G)
-
+&nbsp;
 ![](https://drive.google.com/uc?id=1WHRc_f9xwZ33T_BeriuyLLtkwhHNNYfU)
-
 ![](https://drive.google.com/uc?id=1cLQr958D3EqRHFm5Oy-43vbWAr6VY8cA)
 
 * 명령어 정리
-
+&nbsp;
 ![](https://mblogthumb-phinf.pstatic.net/20150506_273/nfwscho_1430852614992MURHx_PNG/%B9%E3%BE%D3%B0%B3_vim_%C8%AD%B8%E9%C0%CC%B5%BF_00.png?type=w420)
 
 
