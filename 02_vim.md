@@ -222,3 +222,19 @@ set cindent
 ~~~
 set nu
 ~~~
+* 참고(vimrc 설정 커스터마이징)
+~~~
+set nu
+set shiftwidth = 4
+set showmatch
+set ruler
+set smartcase
+set cursorline
+set hlsearch
+set tabstop=4
+syntax on
+colorscheme delek
+
+set enc=utf-8
+set fencs=utf-9,euckr
+~~~
