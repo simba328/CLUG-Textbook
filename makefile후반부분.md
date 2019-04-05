@@ -57,9 +57,9 @@ target : dependency
 gccmakedep main.c input.c print.c
 
 ```
-라고 터미널에 명령어를 입력한 후 다시 makefile에 들어가보면, 가장 아래 부분에 의존관계가 형성되었음을 알 수 있다. 
+라고 터미널에 명령어를 입력한 후 다시 makefile에 들어가보면, 가장 아래 부분에 의존관계가 형성되었음을 알 수 있다.
 
-###Multiple target(다중 타겟)
+### Multiple target(다중 타겟)
 몇몇의 파일들을 각각 묶어, 여러 개의 실행파일을 만들고 싶을 때 이를 하나의 Makefile에서 할 수 있는 방법이 다중 타겟을 지정하는 방법이다.
 
 ### Recursive make(순환 make)

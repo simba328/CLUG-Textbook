@@ -39,10 +39,10 @@ make를 사용하지 않고 터미널에서 이 프로그램을 빌드하여 실
 $ gcc -c main.c
 $ gcc -c print.c
 $ gcc -c input.c
-$ gcc -o test main.o read.o write.o
+$ gcc -o test main.o print.o input.o
 
 ```
-※ gcc 사용방법은 (---)에서 참고하자.
+※ gcc 사용방법은 [03_GCC](https://github.com/simba328/CLUG-Textbook/blob/master/03_GCC.md)에서 참고하자.
 
 아래의 두 문서는 똑같은 일을 수행하는  makefile이다.
 
@@ -84,7 +84,7 @@ gcc -o test main.o print.o input.o
 
 ex1) main.c 변경: main.c 재컴파일 -> main.o파일 갱신 -> test 갱신
 
-ex2) io.h 변경: 모든 c파일 재컴파일 -> 모든 오브젝트파일 갱신 -> test 갱신 
+ex2) io.h 변경: 모든 c파일 재컴파일 -> 모든 오브젝트파일 갱신 -> test 갱신
 
 
 ## 5. 매크로
